@@ -187,90 +187,156 @@ body {
 
 
 
+/* Estilo del Modal */
+.modal-content {
+    background-color: #333;
+    /* Fondo oscuro para el modal */
+    color: white;
+    /* Texto blanco */
+}
+
+/* Estilo del Encabezado del Modal */
+.modal-header {
+    background-color: #e50000;
+    /* Fondo rojo en el encabezado */
+    color: white;
+    /* Color del texto en el encabezado */
+    border-bottom: 2px solid #fff;
+    /* Línea blanca debajo del encabezado */
+}
+
+/* Estilo del Título del Modal */
+.modal-title {
+    color: white;
+    /* Color blanco para el título */
+}
+
+/* Estilo del Cuerpo del Modal */
+.modal-body {
+    background-color: #444;
+    /* Fondo oscuro para el cuerpo del modal */
+    color: white;
+    /* Color blanco para el texto */
+}
+
+/* Estilo del Pie del Modal */
+.modal-footer {
+    background-color: #333;
+    /* Fondo oscuro para el pie del modal */
+    color: white;
+    /* Color blanco para el texto */
+    border-top: 2px solid #fff;
+    /* Línea blanca encima del pie */
+}
+
+/* Estilo del Botón Cerrar */
+.close {
+    color: white;
+    /* Color del botón de cerrar */
+    opacity: 1;
+    /* Opacidad al máximo para que se vea bien */
+}
+
+/* Estilo al pasar el mouse sobre el botón Cerrar */
+.close:hover {
+    color: #e50000;
+    /* Cambia el color del botón al rojo al pasar el mouse */
+}
+
+/* Estilos para el modal */
+.modal-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.modal-body img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.modal-body p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.modal-body .alergenos {
+    color: #ffc107;
+    /* Amarillo para los alérgenos */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
 footer {
     background-color: #E50000;
-    /* Fondo rojo */
     color: white;
     text-align: center;
     padding-bottom: 12px;
     padding-top: 12px;
     margin-top: auto;
-    /* Empuja el footer al final de la página */
     width: 100%;
-    /* Asegura que ocupe todo el ancho */
 }
-
 
 .footer-rail {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
-    font-weight: 900;
-    font-style: italic;
-    text-align: center;
-    /* Espacio entre el rail y el contenido del footer */
+    position: relative;
+    height: 2rem;
+    margin-bottom: 20px;
 }
 
+.rail-content {
+    display: flex;
+    white-space: nowrap;
+    animation: slide 15s linear infinite;
+}
 
 .footer-rail p {
     font-size: 1.5rem;
     font-weight: bold;
-    animation: slide 10s linear infinite;
-    white-space: nowrap;
     margin-right: 5px;
+    font-style: italic;
 }
-
 
 @keyframes slide {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
-
-
     100% {
         transform: translateX(-100%);
     }
 }
 
-
 .contenedor-footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* Permite que sea responsivo */
     text-align: center;
     gap: 10px;
-    /* Espaciado entre los textos */
 }
-
 
 .contenedor-footer p {
     margin: 0;
     font-size: 1rem;
 }
 
-
 .texto-blanco {
     color: white;
 }
 
-
 .texto-borde {
     color: #E50000;
-    /* Color de relleno negro */
     -webkit-text-stroke: 1px white;
-    /* Borde blanco */
 }
-
 
 @media (max-width: 768px) {
     .contenedor-footer {
         flex-direction: column;
     }
-
-
     .footer-rail p {
         font-size: 1rem;
     }

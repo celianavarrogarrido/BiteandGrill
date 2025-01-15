@@ -1,0 +1,254 @@
+body {
+    margin: 0px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #E50000;
+    /* Color rojo */
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre logo y enlaces */
+    align-items: center;
+    /* Centrado vertical */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navbar .logo {
+    color: #FFFFFF;
+    /* Texto blanco */
+    font-weight: bold;
+    /* Negrita */
+    font-size: 1.5rem;
+    /* Tamaño del logo */
+    text-decoration: none;
+    /* Sin subrayado */
+    margin-left: 80px;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar .nav-links {
+    flex-grow: 1;
+    /* Para usar el espacio disponible */
+    display: flex;
+    justify-content: center;
+    /* Centra los enlaces */
+    gap: 90px;
+    /* Espaciado entre enlaces */
+}
+
+/* Enlaces en la barra de navegación */
+.navbar .nav-links a {
+    color: #FFFFFF;
+    /* Texto blanco */
+    font-weight: bold;
+    /* Negrita */
+    font-size: 35px;
+    /* Tamaño grande de texto para los enlaces */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+/* Efecto hover para los enlaces */
+.navbar .nav-links a:hover {
+    color: #E50000;
+    /* Color de relleno rojo */
+    -webkit-text-stroke: 1px white;
+    /* Borde blanco */
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links a {
+        font-size: 24px;
+        /* Reduce el tamaño de los enlaces en pantallas pequeñas */
+    }
+
+    .navbar .nav-links {
+        gap: 30px;
+        /* Reduce el espacio entre enlaces */
+    }
+}
+
+footer {
+    background-color: #E50000;
+    /* Fondo rojo */
+    color: white;
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-top: auto;
+    /* Empuja el footer al final de la página */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho */
+}
+
+.footer-rail {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    /* Espacio entre el rail y el contenido del footer */
+}
+
+.footer-rail p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    animation: slide 10s linear infinite;
+    white-space: nowrap;
+    margin-right: 5px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Permite que sea responsivo */
+    text-align: center;
+    gap: 10px;
+    /* Espaciado entre los textos */
+}
+
+.contenedor-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+.texto-borde {
+    color: #E50000;
+    /* Color de relleno negro */
+    -webkit-text-stroke: 1px white;
+    /* Borde blanco */
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+    }
+
+    .footer-rail p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+.video-background {
+    position: fixed;
+    /* Fija el video como fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Envía el video al fondo */
+}
+
+video {
+    object-fit: cover;
+    /* Cubre toda el área sin distorsión */
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: relative;
+    /* Mantiene el texto sobre el video */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay img {
+    width: 38.5%;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.text-content p {
+    font-size: 1.5rem;
+    margin: 0px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.burger {
+    width: 500px;
+    margin-top: 0%;
+    margin-bottom: 1.25%;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.patatas-izq {
+    position: absolute;
+    /* Permite un control absoluto de la posición */
+    left: 0;
+    /* Alinea al borde izquierdo */
+    max-width: 100%;
+    /* Evita que la imagen se salga del área visible */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .text-content h1 {
+        font-size: 2.5rem;
+        /* Texto más pequeño en pantallas móviles */
+    }
+
+    .text-content h2 {
+        font-size: 2rem;
+        /* Subtítulo más pequeño */
+    }
+
+    .burger {
+        width: 200px;
+        /* Imagen más pequeña */
+    }
+}

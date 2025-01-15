@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="../styles/reserva.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <a href="../../index.html" class="logo">
+                <img src="../images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <!-- Enlaces de navegación -->
+            <div class="nav-links">
+                <a href="carta.html">CARTA</a>
+                <a href="domicilio.html">A DOMICILIO</a>
+                <a href="reserva.html">RESERVAS</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Sección de reservas -->
+    <section class="reservas">
+        <form>
+            <select name="restaurante" id="restaurante">
+                <option value="" disabled selected>Seleccione un restaurante</option>
+                <option value="Sabor Urbano">Sabor Urbano</option>
+                <option value="La Parrilla Secreta">La Parrilla Secreta</option>
+                <option value="The Meat Lab">The Meat Lab</option>
+            </select>
+
+            <input type="tel" placeholder="Teléfono" required>
+            <input type="datetime-local" required>
+            <input type="number" placeholder="Nº de personas" min="1" required>
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+
+
+    <!-- Contenedor de Restaurantes -->
+    <div class="restaurant-container">
+        <!-- Primer Restaurante -->
+        <div class="restaurant">
+            <h3>Sabor Urbano</h3>
+            <div class="restaurant-content">
+                <img src="../images/sabor-urbano.jpg" alt="Sabor Urbano" class="restaurant-img">
+                <div class="restaurant-info">
+                    <p><strong>Avenida de Andalucía</strong></p>
+                    <p>Un espacio moderno donde lo urbano se mezcla con lo gastronómico. Platos únicos y vibrantes, con
+                        ingredientes frescos y locales, ideales para los amantes de la buena comida. Ven y disfruta de
+                        un ambiente relajado, perfecto para socializar o trabajar en un entorno que inspira.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Segundo Restaurante -->
+        <div class="restaurant">
+            <h3>La Parrilla Secreta</h3>
+            <div class="restaurant-content">
+                <img src="../images/parrilla-secreta.jpg" alt="La Parrilla Secreta" class="restaurant-img">
+                <div class="restaurant-info">
+                    <p><strong>Avenida Kansas City</strong></p>
+                    <p>Hamburguesas únicas con un toque moderno y urbano, elaboradas con carnes maduradas a la
+                        perfección. Nos especializamos en cortes premium, madurados por menos de 70 días para lograr el
+                        equilibrio perfecto entre sabor y textura. Ven y descubre una experiencia gastronómica que
+                        redefine lo que significa disfrutar de una hamburguesa.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Tercer Restaurante -->
+        <div class="restaurant">
+            <h3>The Meat Lab</h3>
+            <div class="restaurant-content">
+                <img src="../images/meat-lab.jpg" alt="The Meat Lab" class="restaurant-img">
+                <div class="restaurant-info">
+                    <p><strong>Avenida de la Paz</strong></p>
+                    <p>Descubre los sabores auténticos en La Parrilla Secreta. Especializados en cortes de carne premium
+                        y cocción a la parrilla, ofrecemos una experiencia culinaria sin igual. Perfecto para los
+                        carnívoros de corazón que buscan calidad en cada bocado.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <!-- Animación Footer Rail -->
+        <div class="footer-rail">
+            <p class="texto-blanco">NACIDOS PARA MORDER</p>
+            <p class="texto-borde">NACIDOS PARA MORDER</p>
+            <p class="texto-blanco">NACIDOS PARA MORDER</p>
+            <p class="texto-borde">NACIDOS PARA MORDER</p>
+            <p class="texto-blanco">NACIDOS PARA MORDER</p>
+            <p class="texto-borde">NACIDOS PARA MORDER</p>
+        </div>
+        <div class="contenedor-footer">
+            <p>Facebook | Twitter | Instagram</p>
+            <p>Contacto: info@biteandgrill.com</p>
+            <p>Bite & Grill 2023-2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>

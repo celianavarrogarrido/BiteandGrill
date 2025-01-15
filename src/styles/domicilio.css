@@ -75,42 +75,40 @@ body {
 
 footer {
     background-color: #E50000;
-    /* Fondo rojo */
     color: white;
     text-align: center;
     padding-bottom: 12px;
     padding-top: 12px;
     margin-top: auto;
-    /* Empuja el footer al final de la página */
     width: 100%;
-    /* Asegura que ocupe todo el ancho */
 }
 
 .footer-rail {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
     overflow: hidden;
     width: 100%;
-    font-weight: 900;
-    font-style: italic;
-    text-align: center;
-    /* Espacio entre el rail y el contenido del footer */
+    position: relative;
+    height: 2rem;
+    margin-bottom: 20px;
+}
+
+.rail-content {
+    display: flex;
+    white-space: nowrap;
+    animation: slide 15s linear infinite;
 }
 
 .footer-rail p {
     font-size: 1.5rem;
     font-weight: bold;
-    animation: slide 10s linear infinite;
-    white-space: nowrap;
     margin-right: 5px;
+    font-style: italic;
 }
 
 @keyframes slide {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
-
     100% {
         transform: translateX(-100%);
     }
@@ -120,10 +118,8 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* Permite que sea responsivo */
     text-align: center;
     gap: 10px;
-    /* Espaciado entre los textos */
 }
 
 .contenedor-footer p {
@@ -137,16 +133,13 @@ footer {
 
 .texto-borde {
     color: #E50000;
-    /* Color de relleno negro */
     -webkit-text-stroke: 1px white;
-    /* Borde blanco */
 }
 
 @media (max-width: 768px) {
     .contenedor-footer {
         flex-direction: column;
     }
-
     .footer-rail p {
         font-size: 1rem;
     }

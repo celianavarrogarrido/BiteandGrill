@@ -67,13 +67,12 @@
                 <!-- Elementos añadidos dinámicamente -->
             </div>
             <div class="pagar">
-                <button id="pagar">Pagar (0.00 €)</button>
+                <a href="pagar.html"><button id="pagar">Pagar (0.00 €)</button></a>
             </div>
         </div>
     </div>
 
     <script>
-        // Seleccionar elementos del DOM
         const menuItems = document.querySelectorAll('.menu .item');
         const cestaItemsContainer = document.getElementById('cesta-items');
         const pagarButton = document.getElementById('pagar');
@@ -137,17 +136,29 @@
         function updateTotal() {
             total = Object.values(cesta).reduce((sum, item) => sum + item.price * item.quantity, 0);
             pagarButton.textContent = `Pagar (${total.toFixed(2)} €)`;
+            const precio = total;
+            localStorage.setItem("precioPagar", precio.toFixed(2));
         }
     </script>
 
     <footer>
         <div class="footer-rail">
-            <p class="texto-blanco">NACIDOS PARA MORDER</p>
-            <p class="texto-borde">NACIDOS PARA MORDER</p>
-        <p class="texto-blanco">NACIDOS PARA MORDER</p>
-        <p class="texto-borde">NACIDOS PARA MORDER</p>
-        <p class="texto-blanco">NACIDOS PARA MORDER</p>
-        <p class="texto-borde">NACIDOS PARA MORDER</p>
+            <div class="rail-content">
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+            </div>
+            <div class="rail-content">
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+            </div>
         </div>
         <div class="contenedor-footer">
             <p>Facebook | Twitter | Instagram</p>

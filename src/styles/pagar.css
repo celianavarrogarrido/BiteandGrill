@@ -1,0 +1,192 @@
+body {
+    margin: 0px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #E50000;
+    /* Color rojo */
+    display: flex;
+    justify-content: space-between;
+    /* Espacio entre logo y enlaces */
+    align-items: center;
+    /* Centrado vertical */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navbar .logo {
+    color: #FFFFFF;
+    /* Texto blanco */
+    font-weight: bold;
+    /* Negrita */
+    font-size: 1.5rem;
+    /* Tamaño del logo */
+    text-decoration: none;
+    /* Sin subrayado */
+    margin-left: 80px;
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar .nav-links {
+    flex-grow: 1;
+    /* Para usar el espacio disponible */
+    display: flex;
+    justify-content: center;
+    /* Centra los enlaces */
+    gap: 90px;
+    /* Espaciado entre enlaces */
+}
+
+/* Enlaces en la barra de navegación */
+.navbar .nav-links a {
+    color: #FFFFFF;
+    /* Texto blanco */
+    font-weight: bold;
+    /* Negrita */
+    font-size: 35px;
+    /* Tamaño grande de texto para los enlaces */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+/* Efecto hover para los enlaces */
+.navbar .nav-links a:hover {
+    color: #E50000;
+    /* Color de relleno rojo */
+    -webkit-text-stroke: 1px white;
+    /* Borde blanco */
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links a {
+        font-size: 24px;
+        /* Reduce el tamaño de los enlaces en pantallas pequeñas */
+    }
+
+    .navbar .nav-links {
+        gap: 30px;
+        /* Reduce el espacio entre enlaces */
+    }
+}
+
+footer {
+    background-color: #E50000;
+    color: white;
+    text-align: center;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-top: auto;
+    width: 100%;
+}
+
+.footer-rail {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 2rem;
+    margin-bottom: 20px;
+}
+
+.rail-content {
+    display: flex;
+    white-space: nowrap;
+    animation: slide 15s linear infinite;
+}
+
+.footer-rail p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 5px;
+    font-style: italic;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+
+.contenedor-footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.texto-blanco {
+    color: white;
+}
+
+.texto-borde {
+    color: #E50000;
+    -webkit-text-stroke: 1px white;
+}
+
+@media (max-width: 768px) {
+    .contenedor-footer {
+        flex-direction: column;
+    }
+    .footer-rail p {
+        font-size: 1rem;
+    }
+}
+
+
+
+.pagar {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72.73vh;
+}
+
+.container {
+    background-color: #d3d3d3;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.container input, 
+.container select, 
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.container button {
+    background-color: #888;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #777;
+}

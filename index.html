@@ -12,9 +12,15 @@
     <header>
         <div class="navbar">
             <!-- Logo -->
-            <a class="logo">
+            <a routerLink="/inicio" class="logo">
                 <img src="src/images/logo.png" alt="Logo" class="logo-img">
             </a>
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <!-- Enlaces de navegación -->
             <div class="nav-links">
                 <a href="src/other/carta.html">CARTA</a>
@@ -43,12 +49,22 @@
     <footer>
         <!-- Animación Footer Rail -->
         <div class="footer-rail">
-            <p class="texto-blanco">NACIDOS PARA MORDER</p>
-            <p class="texto-borde">NACIDOS PARA MORDER</p>
-            <p class="texto-blanco">NACIDOS PARA MORDER</p>
-            <p class="texto-borde">NACIDOS PARA MORDER</p>
-            <p class="texto-blanco">NACIDOS PARA MORDER</p>
-            <p class="texto-borde">NACIDOS PARA MORDER</p>
+            <div class="rail-content">
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+            </div>
+            <div class="rail-content">
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+                <p class="texto-blanco">NACIDOS PARA MORDER</p>
+                <p class="texto-borde">NACIDOS PARA MORDER</p>
+            </div>
         </div>
         <div class="contenedor-footer">
             <p>Facebook | Twitter | Instagram</p>
@@ -56,6 +72,17 @@
             <p>Bite & Grill 2023-2024</p>
         </div>
     </footer>
+    <script>
+        // Control del menú hamburguesa
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+    
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 
 </html>
